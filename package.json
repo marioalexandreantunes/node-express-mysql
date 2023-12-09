@@ -1,7 +1,7 @@
 {
   "name": "expressjs-mysql",
   "version": "1.0.0",
-  "description": "qQickly create an application skeleton",
+  "description": "Qickly create an application skeleton",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
