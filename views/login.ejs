@@ -1,0 +1,52 @@
+<%- include('./base/head'); %>
+
+    <body>
+        <div class="container">
+            <%- include('./base/nav'); %>
+        </div>
+        <main class="mt-5 container p-5">
+            <% if(message !=="" ){ %>
+                <div class="container m-5">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>
+                            <%= message %>
+                        </strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+                <% } %>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="card bg-light p-5 shadow mt-5">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="display-6 fw-lighter">LOGIN</p>
+                                    </div>
+                                    <div class="col text-end">
+                                        <img src="static\images\user-interface.png" class="img-fluid w-50"
+                                            alt="Responsive image">
+                                    </div>
+                                </div>
+                                <hr>
+                                <form action="/auth" method="post">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="text" name="email" placeholder="Email" id="email"
+                                            class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="text_senha" class="form-label">Senha</label>
+                                        <input type="password" name="password" placeholder="Password" id="password"
+                                            class="form-control" required>
+                                    </div>
+                                    <div>
+                                        <input type="submit" value="Login" class="btn btn-secondary w-100">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+        </main>
+    </body>
+    <%- include('./base/footer'); %>
