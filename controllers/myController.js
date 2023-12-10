@@ -3,6 +3,8 @@ const string = require("string-sanitizer");
 
 const get_index = async (req, res) => {
 
+    console.log("Search ", req.query)
+
     if (req.session.loggedin) {
         res.render("index", {
             user: req.session.user,
@@ -23,6 +25,7 @@ const get_logout = (req, res) => {
 };
 
 const post_login = async (req, res) => {
+
     let email = req.body.email;
     let password = req.body.password;
 
